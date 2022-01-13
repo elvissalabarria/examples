@@ -4,6 +4,9 @@ A new Flutter project.
 
 ## Getting Started
 
+this is a public project where i collaborate with some of the stackoverflow questions plus every new thing i try
+
+
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:

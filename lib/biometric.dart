@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:local_auth/local_auth.dart';
@@ -37,6 +39,7 @@ class _BiometricScreenState extends State<BiometricScreen> {
     try {
       canCheckBiometrics = await auth.canCheckBiometrics;
     } on PlatformException catch (e) {
+      print(e);
       canCheckBiometrics = false;
     }
     if (!mounted) {
@@ -53,6 +56,7 @@ class _BiometricScreenState extends State<BiometricScreen> {
     try {
       availableBiometrics = await auth.getAvailableBiometrics();
     } on PlatformException catch (e) {
+      print(e);
       availableBiometrics = <BiometricType>[];
     }
     if (!mounted) {

@@ -42,7 +42,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final GlobalKey _parentKey = GlobalKey();
+  final GlobalKey parentKey = GlobalKey();
   int countItems = 0;
   late TextEditingController textController;
   List<String> list = ["item1", "item2", "item3", "item4", "item5"];

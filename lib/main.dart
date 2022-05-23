@@ -1,3 +1,4 @@
+import 'package:examples/biometric.dart';
 import 'package:examples/home.dart';
 import 'package:examples/scree.dart';
 import 'package:flutter/material.dart';
@@ -71,16 +72,14 @@ class _MyHomePageState extends State<MyHomePage> {
               padding: const EdgeInsets.only(left: 20, right: 20.0),
               child: TextField(
                 controller: textController,
-                decoration:
-                    const InputDecoration(labelText: 'Text fields number'),
+                decoration: const InputDecoration(labelText: 'Text fields number'),
               ),
             ),
             const SizedBox(
               height: 10,
             ),
             ElevatedButton(
-                onPressed: showTextFields,
-                child: const Text('Press to show text field')),
+                onPressed: showTextFields, child: const Text('Press to show text field')),
             const SizedBox(
               height: 10,
             ),
@@ -109,7 +108,25 @@ class _MyHomePageState extends State<MyHomePage> {
                         builder: (context) => const Home(),
                       ));
                 },
-                child: const Text("Color container"))
+                child: const Text("Color container")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const NosVoyages(),
+                      ));
+                },
+                child: const Text("Imput container")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const BiometricScreen(),
+                      ));
+                },
+                child: const Text("BioMetric"))
           ],
         ),
       ),

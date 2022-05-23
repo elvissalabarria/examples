@@ -61,7 +61,9 @@ class _MyHomePageState extends State<MyHomePage> {
     }
 
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text("Examples"),
+      ),
       body: Center(
         child: Column(
           children: [
